@@ -5,3 +5,10 @@ def getf1(f1):
     data = response.json()
 for driver in data["data"]:
     print(driver["name"])
+drivers = data["data"]
+rankings = []
+for driver in drivers:
+    rankings.append(driver)
+for i in range(rankings):
+    for a in range(rankings)-1:
+        
