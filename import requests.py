@@ -23,3 +23,5 @@ drivers = []
 for driver in drivers:
     if driver[1] == 0:
         print (driver[0])
+        
+getf1()
