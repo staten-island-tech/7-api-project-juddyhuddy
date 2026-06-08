@@ -1,12 +1,12 @@
 import requests
 
 
-def getf1(f1):
+def getf1(data):
     response = requests.get(f"https://racinghub.net/api/v1/drivers?page=1&limit=100&order_by=name&sort_by=asc") 
     if response.status_code != 200:
         print('Error fetching data')
         return None
-    
+    getf1(data)
     total_championships = 0
 
     data = response.json()
@@ -18,10 +18,10 @@ def getf1(f1):
         total_championships += championships
         drivers.append([name, championships])
     print(total_championships)
-print("drivers with 0 championships:")
-drivers = []
-for driver in drivers:
-    if driver[1] == 0:
-        print (driver[0])
+    print("drivers with 0 championships:")
+    drivers = []
+    for driver in drivers:
+        if driver[1] == 0:
+            print (driver[0])
         
-getf1()
+  
